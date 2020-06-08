@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Loop</title>
+	</style>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <!-- bisa ditambah kan track-by="$index" bisa nanti kita tulis disnin id -->
+            <li v-for="member in members"> 
+                {{member.nama + " berumur"}}
+                {{member.umur + " tahun"}}
+            </li>
+        </ul>
+    </div>
+
+
+<script type="text/javascript" src="../vue.js"></script>
+<script>
+	var vo = new Vue({
+        el : '#app',
+        data : {
+            members : [
+                { nama : 'Sam', umur : 17 },
+                { nama : 'adit', umur : 19 },
+                { nama : "ayat", umur : 15}
+            ]
+        }
+	});
+
+</script>
+</body>
+</html>

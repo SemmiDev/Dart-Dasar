@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	.tombol{
+		text-align: center;
+		background: #46de4b;
+		color: white;
+		font-size: 11pt;
+		width: 52px;
+		margin: auto;
+		border: none;
+		border-radius: 8px;
+		padding: 10px 10px;
+		text-decoration: none;
+	}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<span v-bind:title="message">
+		<a class="tombol">date</button></a>
+		</span>
+	</div>
+
+<script src="../vue.js"></script>
+<script>
+	var app = new Vue({
+		el : '#app',
+		data : {
+			message : 'you loaded this page on ' + new Date().toLocaleString()
+		}
+	})
+</script>
+</body>
+</html>

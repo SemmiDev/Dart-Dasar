@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>ComputedProperties</title>
+</head>
+<body>
+<div id="app">
+	nama {{ biodata }}
+
+</div>
+</body>
+
+<script type="text/javascript" src="../vue.js"></script>
+<script>
+	var vo = new Vue({
+		el: '#app',
+		data : {
+			nama 	: "Sammi",
+			umur 	: 19,
+			biodata : ''
+		},
+		computed : {
+			biodata : {
+				get : function(){
+				return this.nama
+			},
+				set : function(params){
+					// ini dieksekusi lewat console
+				var credential = params.split(' ')
+				this.name = credential[0]
+				this.umur = credential[1]
+			}
+		}
+	}
+});
+
+</script>
+</html>

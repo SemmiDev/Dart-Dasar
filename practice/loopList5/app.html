@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Loop</title>
+	</style>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="member in members">
+                {{member.nama}}
+                {{member.umur}}
+            </li>
+
+            <li v-for="i in 5">
+                {{ i }}
+            </li>
+        </ul>
+        <ul>
+            <li v-for="(kunci, looping) in members2">
+                {{ looping }} :  {{ kunci }}
+            </li>
+        </ul>
+    </div>
+
+
+<script type="text/javascript" src="../vue.js"></script>
+<script>
+	var vo = new Vue({
+        el : '#app',
+        data : {
+            members : [
+                { nama : 'Sam', umur : 17 },
+                { nama : 'adit', umur : 19 },
+                { nama : "ayat", umur : 15}
+            ],
+
+            members2 : {
+                nama : "hello",
+                umur : 14,
+                language : "angular",
+                hobby : "berenang",
+            }
+        }
+	});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- angka 13 mewakili enter -->
+      Username : <input type="text" v-on:keyup="cekidot" />
+      <br />
+      Password : <input type="password" v-on:keyup="cekidot" />
+      <button v-on:click="boom">Click me</button>
+      <button v-on:click="name('sam')">Sign in</button>
+    </div>
+
+    <script src="../vue.js"></script>
+    <script>
+      var vo = new Vue({
+        el: "#app",
+        data: {},
+        methods: {
+          boom: function() {
+            alert("Clicked");
+          },
+          cekidot: function() {
+            alert(username + " Success");
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

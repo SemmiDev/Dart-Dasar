@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="app">
+		<ol>
+			<!-- loop : nama ini terserah
+				 in   : artinya di dalam
+				 todos : nama array yg kita buat
+			 -->
+			<li v-for="loop in todos">
+				{{loop.text}}
+			</li>
+		</ol>
+	</div>
+
+<script src="../vue.js"></script>
+<script>
+	var app = new Vue({
+		el : '#app',
+		data : {
+			todos: [
+				{ text : 'Learn JavaScript'},
+				{ text : 'Learn Java '},
+				{ text : 'Learn Vue'}
+			]
+		} 
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Data Binding</title>
+	<style type="text/css">
+		html,body{
+		padding: 0;
+		margin:0;
+		font-family: all;
+	}
+		#app{
+			width: 500px;
+			color: aqua;
+			background-color: black;
+			border-radius: 8px;
+			margin: 30px auto;
+			padding: 30px 20px;
+		}
+	</style>
+</head>
+<body>
+	<!-- dengan menggunakan tanda bintang kita tidak bisa mengubah lagi di console karena * : permanen -->
+
+	<div id="app">
+		<b>DATA SISWA</b>
+		<hr width="500px" align="left" color="silver">
+		<ul>
+			<li>Name 		: {{ nama + "mi Aldhi Yanto"}}				 </li>
+			<li>CallName 	: {{ nama }}    			  			 	 </li>
+			<li>Reeverse 	: {{ nama.split('').reverse().join('') }}	 </li>
+			<li>Age			: {{ umur }}   								 </li>
+			<li>Gender   	: {{ jk ? 'Man' : 'Perempuan'}}     		 </li>
+			<li>Dream 		: {{ cita }}   								 </li>
+			<li>Hobby  		: {{ hobi }} 					             </li>
+		</ul>
+	</div>
+
+<script type="text/javascript" src="../vue.js"></script>
+<script>
+
+	var vo = new Vue({
+		// key :  value
+		el	  : '#app',
+		data  : {
+			nama  : "sam",
+			kelas : "XII MIPA 1",
+			umur  : 19,
+			jk : true,
+			cita  : "Software Developer",
+			hobi  : "ngoding"
+		},
+	});
+
+</script>
+</body>
+</html>

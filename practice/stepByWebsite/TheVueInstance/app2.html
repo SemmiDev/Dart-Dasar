@@ -1,0 +1,37 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+      <title></title>
+  </head>
+  <body>
+    <div id="app">
+        <p>{{ foo }}</p>
+        <button v-on:click="foo = 'baz'">Change it</button>
+      </div>
+
+  <script src="../vue.js"></script>
+  <script>
+
+    var vm = new Vue({
+        data : {
+            newTodoText: '',
+            visitCount: 0,
+            hideCompletedTodos: false,
+            todos: [],
+            error: null
+        }
+      })
+
+      var obj = {
+          foo : 'bar'
+      }
+
+      Object.freeze(obj)
+      new Vue({
+        el: '#app',
+        data: obj
+    })
+
+  </script>
+  </body>
+  </html>  

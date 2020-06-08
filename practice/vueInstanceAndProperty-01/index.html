@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<div id="app">
+		Nama  :  {{nama}}
+		<br>
+		Kelas :  {{kelas}}
+		<br>
+		Umur  :  {{umur}}
+	</div>
+
+<script type="text/javascript" src="../vue.js"></script>
+<script>
+	var data1 = {
+		nama  : "Sammi Aldhi Yanto",
+		kelas : "XII MIPA 1",
+		umur  : 19
+	}
+	new Vue({
+		// key :  value
+		el: '#app',
+		data: data1
+	});
+</script>
+</body>
+</html>
